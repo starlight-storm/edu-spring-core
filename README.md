@@ -1,5 +1,5 @@
-# 「Spring Core」演習題材
-・内容：Spring初心者向け。DIxAOPを中心に、MyBatisとSpring MVCを使ったWebアプリケーション開発
+# 「Spring4 入門」演習題材
+・内容：Spring初心者向け。DIxAOPを中心に、MyBatisとSpring MVCを使ったWebアプリケーション開発<br>
 ・前提条件：Javaの経験があること<br>
 ・受講日数：1日<br>
 ・テキスト：PDF（別途送付）<br>
