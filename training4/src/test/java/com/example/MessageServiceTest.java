@@ -1,19 +1,12 @@
 package com.example;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
-
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.business.domain.Message;
 import com.example.business.service.MessageService;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "./config/applicationContext.xml" })
+//TODO 演習4 不足しているアノテーションを記述しなさい
 public class MessageServiceTest {
 	@Autowired
 	MessageService messageService;
@@ -21,7 +14,6 @@ public class MessageServiceTest {
 	@Test
 	public void testFindOne() {
 		Message message = messageService.findOne();
-		Message testMessage = new Message("Hello DI Annotation!");
-		assertThat(testMessage, equalTo(message));
+		//TODO 演習4 不足している処理を記述しなさい
 	}
 }

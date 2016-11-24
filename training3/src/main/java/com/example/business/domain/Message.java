@@ -10,7 +10,4 @@ public class Message {
 	public String getValue() {
 		return value;
 	}
-
-	// 演習3 TODO: 不足している処理を記述しなさい
-	
 }

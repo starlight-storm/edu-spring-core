@@ -1,11 +1,9 @@
 package com.example.infrastructure;
 
-import org.springframework.stereotype.Repository;
-
 import com.example.business.domain.Message;
 import com.example.business.repository.MessageRepository;
 
-@Repository
+//TODO 演習3 アノテーションがないことを確認
 public class MessageRepositoryImpl implements MessageRepository {
 	public Message findOne() {
 		return new Message("Hello DI Annotation!");
