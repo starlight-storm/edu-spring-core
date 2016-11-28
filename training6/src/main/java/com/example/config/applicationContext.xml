@@ -15,33 +15,35 @@
      http://mybatis.org/schema/mybatis-spring
      http://mybatis.org/schema/mybatis-spring.xsd">
 
-	<context:annotation-config />
-	<context:component-scan base-package="com.example.*" />
-	<context:property-placeholder
-		location="classpath:/com/example/config/jdbc.properties" />
-	<tx:annotation-driven />
+	<beans profile="product">
+		<context:annotation-config />
+		<context:component-scan base-package="com.example.*" />
+		<context:property-placeholder
+			location="classpath:/com/example/config/jdbc.properties" />
+		<tx:annotation-driven />
 
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<!-- 演習5 TODO: DatasourceやMybatis定義ファイルなどの定義を記述する -->
-	</bean>
+		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<!-- 演習5 TODO: DatasourceやMybatis定義ファイルなどの定義を記述する -->
+		</bean>
 
-	<bean id="employeeRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<!-- 演習5 TODO: EmployeeRepositoryなどの定義を記述する -->
-	</bean>
+		<bean id="employeeRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
+			<!-- 演習5 TODO: EmployeeRepositoryなどの定義を記述する -->
+		</bean>
 
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
-		p:dataSource-ref="dataSource" />
+		<bean id="transactionManager"
+			class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+			p:dataSource-ref="dataSource" />
 
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		p:driverClassName="${jdbc.driverClassName}" 
-		p:url="${jdbc.url}"
-		p:username="${jdbc.username}" 
-		p:password="${jdbc.password}" />
+		<bean id="dataSource"
+			class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+			p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}"
+			p:username="${jdbc.username}" p:password="${jdbc.password}" />
+	</beans>
 
-	<jdbc:initialize-database data-source="dataSource">
-		<jdbc:script location="script/table.sql" />
-		<jdbc:script location="script/data.sql" />
-	</jdbc:initialize-database>
+	<beans profile="test">
+		<jdbc:initialize-database data-source="dataSource">
+			<jdbc:script location="script/table.sql" />
+			<jdbc:script location="script/data.sql" />
+		</jdbc:initialize-database>
+	</beans>
 </beans>

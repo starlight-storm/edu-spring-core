@@ -2,7 +2,8 @@ package com.example;
 
 import java.util.List;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.example.business.domain.Employee;
 import com.example.business.service.EmployeeService;
@@ -44,7 +45,11 @@ public class Main {
 		System.out.println("登録: " + cnt + "件");
 	}
 	
-	private ClassPathXmlApplicationContext createApplicationContext() {
-		return new ClassPathXmlApplicationContext("/com/example/config/applicationContext.xml");
+	private ApplicationContext createApplicationContext() {
+		GenericXmlApplicationContext context = new GenericXmlApplicationContext();
+		context.getEnvironment().setActiveProfiles("product", "test");
+		context.load("/com/example/config/applicationContext.xml");
+		context.refresh();  
+		return context;
 	}
 }

@@ -4,7 +4,7 @@
 	<groupId>sample</groupId>
 	<artifactId>SpringTraining</artifactId>
 	<version>0.0.1</version>
-	<name>Training1</name>
+	<name>Training</name>
 
 	<properties>
 		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>

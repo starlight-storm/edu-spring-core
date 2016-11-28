@@ -8,6 +8,13 @@ import org.apache.ibatis.annotations.Select;
 import com.example.business.domain.Employee;
 
 public interface EmployeeRepository {
+//  プロパティとカラム名が異なる場合
+//	@Results({
+//        @Result(property = "id", column = "EMP_ID"),
+//        @Result(property = "name", column = "EMP_NAME"),
+//        @Result(property = "mail", column = "EMP_MAIL")
+//      })
+	
 	@Select("SELECT ID,NAME,MAIL FROM EMPLOYEE")
 	List<Employee> findAll();
 	

@@ -2,7 +2,8 @@ package com.example;
 
 import java.util.List;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.example.business.domain.Employee;
 import com.example.business.service.EmployeeService;
@@ -17,13 +18,12 @@ public class Main {
 		EmployeeService employeeService = (EmployeeService) createApplicationContext().getBean("employeeService");
 		System.out.println("---findAll");
 		findAll(employeeService);
-		// *---TODO 演習6　findAllができたら順番にコメントを外して、進むこと ---*
-//		System.out.println("---findById");
-//		findByid(employeeService, 1); // IDを固定していますが、0に書き換えても動作可能
-//		System.out.println("---create");
-//		create(employeeService);
-//		System.out.println("---findAll 2");
-//		findAll(employeeService);
+		System.out.println("---findById");
+		findById(employeeService, 1); // IDを固定していますが、0に書き換えても動作可能
+		System.out.println("---create");
+		create(employeeService);
+		System.out.println("---findAll 2");
+		findAll(employeeService);
 	}
 
 	private void findAll(EmployeeService employeeService) {
@@ -45,7 +45,11 @@ public class Main {
 		System.out.println("登録: " + cnt + "件");
 	}
 	
-	private ClassPathXmlApplicationContext createApplicationContext() {
-		return new ClassPathXmlApplicationContext("/com/example/config/applicationContext.xml");
+	private ApplicationContext createApplicationContext() {
+		GenericXmlApplicationContext context = new GenericXmlApplicationContext();
+		context.getEnvironment().setActiveProfiles("product", "test");
+		context.load("/com/example/config/applicationContext.xml");
+		context.refresh();  
+		return context;
 	}
 }
