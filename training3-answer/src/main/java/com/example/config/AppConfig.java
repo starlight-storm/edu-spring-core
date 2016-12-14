@@ -13,12 +13,12 @@ import com.example.infrastructure.MessageRepositoryImpl;
 @ComponentScan("com.example")
 public class AppConfig {
 	@Bean
-	public MessageRepository MessageRepository(){
+	public MessageRepository messageRepository(){
 		return new MessageRepositoryImpl();
 	}
 
 	@Bean
-	public MessageService MessageService(){
-		return new MessageServiceImpl(MessageRepository());
+	public MessageService messageService(){
+		return new MessageServiceImpl(messageRepository());
 	}
 }
