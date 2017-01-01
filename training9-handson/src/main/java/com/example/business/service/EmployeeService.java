@@ -6,6 +6,6 @@ import com.example.business.domain.Employee;
 
 public interface EmployeeService {
 	List<Employee> findAll();
-	Employee findById(int id);
+	Employee findById(int employeeId);
 	int create(Employee emp);
 }
