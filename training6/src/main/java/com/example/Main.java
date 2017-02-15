@@ -14,16 +14,19 @@ public class Main {
 		main.run();
 	}
 
+	// TODO 演習6 最初にfindAll()を作成する。
+	// findAll()がうまく動作をしたところで、findById()部分のコメントを外して作成。
+	// findById()がうまく動作をしたところで…という風に順番にメソッドを作成する。
 	private void run() {
 		EmployeeService employeeService = (EmployeeService) createApplicationContext().getBean("employeeService");
 		System.out.println("---findAll");
 		findAll(employeeService);
-		System.out.println("---findById");
-		findById(employeeService, 1); // IDを固定していますが、0に書き換えても動作可能
-		System.out.println("---create");
-		create(employeeService);
-		System.out.println("---findAll 2");
-		findAll(employeeService);
+//		System.out.println("---findById");
+//		findById(employeeService, 1); // IDを固定していますが、0に書き換えても動作可能
+//		System.out.println("---create");
+//		create(employeeService);
+//		System.out.println("---findAll 2");
+//		findAll(employeeService);
 	}
 
 	private void findAll(EmployeeService employeeService) {

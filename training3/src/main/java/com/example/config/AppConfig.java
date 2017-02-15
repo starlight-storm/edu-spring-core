@@ -11,4 +11,6 @@ public class AppConfig {
 	public MessageRepository messageRepository(){
 		return new MessageRepositoryImpl();
 	}
+	
+	// TODO 演習3 Serviceを作成しなさい
 }

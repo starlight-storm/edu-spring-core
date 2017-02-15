@@ -23,11 +23,11 @@
 		<tx:annotation-driven />
 
 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-			<!-- 演習5 TODO: DatasourceやMybatis定義ファイルなどの定義を記述する -->
+			<!-- 演習6 TODO: DatasourceやMybatis定義ファイルなどの定義を記述する -->
 		</bean>
 
 		<bean id="employeeRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
-			<!-- 演習5 TODO: EmployeeRepositoryなどの定義を記述する -->
+			<!-- 演習6 TODO: EmployeeRepositoryなどの定義を記述する -->
 		</bean>
 
 		<bean id="transactionManager"
