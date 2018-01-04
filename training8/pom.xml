@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>Training</name>
-	<description>Spring Boot</description>
+	<name>training8</name>
+	<description>Spring Core Training by Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

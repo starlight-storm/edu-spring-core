@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>training4</artifactId>
-	<version>0.0.1</version>
-	<name>Training</name>
+	<version>1.0.0</version>
+	<name>training4</name>
 
 	<properties>
 		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>
@@ -65,4 +65,5 @@
 		</plugins>
 	</build>
 	<groupId>com.example</groupId>
+	<description>Spring Core Training</description>
 </project>

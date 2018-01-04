@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
 	<artifactId>training7-answer</artifactId>
-	<version>0.0.1</version>
-	<name>Training</name>
+	<version>1.0.0</version>
+	<name>training7-answer</name>
 
 	<properties>
 		<org.springframework-version>4.2.8.RELEASE</org.springframework-version>
@@ -98,4 +98,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>Spring Core Training</description>
 </project>

@@ -5,11 +5,11 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>training8-answer</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>training</name>
-	<description>Spring Boot</description>
+	<name>training8-answer</name>
+	<description>Spring Core Training by Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
