@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<dataset>
-<employee id="0" name="伊藤" mail="itou@sample.com" />
-<employee id="1" name="田中" mail="kinosita@sample.com" />
-<employee id="2" name="大下" mail="oosita@sample.jp" />
-</dataset>
