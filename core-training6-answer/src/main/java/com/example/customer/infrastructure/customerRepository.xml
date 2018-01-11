@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+演習では使っていませんが。
+Interfaceではなく、XMLのSQLマッピングを利用する場合は、このファイルを利用します。
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.customer.business.repository.CustomerRepository">
+    <select id="findById" parameterType="int" resultType="Customer">
+        SELECT * FROM CUSTOMER WHERE ID = #{id}
+    </select>
+    <select id="findAll" resultType="Customer">
+        SELECT ID,NAME,ADDRESS,EMAIL_ADDRESS FROM CUSTOMER
+    </select>
+    <insert id="create" parameterType="Customer">
+        INSERT INTO CUSTOMER(NAME,ADDRESS,EMAIL_ADDRESS) VALUES(#{name},#{address},#{emailAddress})
+    </insert>
+</mapper>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+<customer id="0" name="太郎" address="東京都新宿区" email_address="taro@aa.bb.cc" />
+<customer id="1" name="ジロー" address="東京都豊島区" email_address="jiro@aa.bb.cc" />
+<customer id="2" name="三郎" address="長野県松本市" email_address="sabu@aa.bb.cc" />
+<customer id="3" name="四郎" address="東京都足立区" email_address="siro@aa.bb.cc" />
+</dataset>
