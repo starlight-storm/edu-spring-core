@@ -30,7 +30,7 @@
 				</property> -->
 		</bean>
 
-		<!-- <mybatis:scan base-package="sample.service.repository" /> -->
+		<!-- <mybatis:scan base-package="com.example.customer.business.repository" /> -->
 		<bean id="employeeRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
 			<property name="mapperInterface"
 				value="com.example.customer.business.repository.CustomerRepository" />

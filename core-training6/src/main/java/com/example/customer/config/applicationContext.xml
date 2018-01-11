@@ -30,12 +30,7 @@
 				</property> -->
 		</bean>
 
-		<!-- <mybatis:scan base-package="sample.service.repository" /> -->
-		<bean id="employeeRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
-			<property name="mapperInterface"
-				value="com.example.customer.business.repository.CustomerRepository" />
-			<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-		</bean>
+		<!-- TODO: Mapper‚ÅRepository‚ÌŽÀ‘•‚ðì‚é -->
 
 		<bean id="transactionManager"
 			class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
