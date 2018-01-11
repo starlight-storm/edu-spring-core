@@ -6,7 +6,7 @@ import com.example.business.repository.MessageRepository;
 //TODO 演習2 不足しているアノテーションを記述しなさい
 public class MessageServiceImpl implements MessageService {
 	//TODO 演習2 不足しているアノテーションを記述しなさい
-	MessageRepository messageRepository;
+	private MessageRepository messageRepository;
 
 	public Message findOne() {
 		return messageRepository.findOne();

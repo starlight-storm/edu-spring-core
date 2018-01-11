@@ -13,7 +13,7 @@ import com.example.business.repository.EmployeeRepository;
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
-	EmployeeRepository employeeRepository;
+	private EmployeeRepository employeeRepository;
 
 	public List<Employee> findAll() {
 		return employeeRepository.findAll();

@@ -12,7 +12,7 @@ import com.example.business.repository.EmployeeRepository;
 //TODO 演習6 トランザクションのためのアノテーションを記述する
 public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
-	EmployeeRepository employeeRepository;
+	private EmployeeRepository employeeRepository;
 
 	public List<Employee> findAll() {
 		return employeeRepository.findAll();

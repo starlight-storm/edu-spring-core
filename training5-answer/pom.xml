@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
-	<version>1.0.0</version>
-	<name>training5-answer</name>
+	<artifactId>training5-answer</artifactId>
+	<name>training5</name>
 
 	<properties>
-		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>
+		<org.springframework-version>4.3.13.RELEASE</org.springframework-version>
 	</properties>
 
 	<dependencies>
@@ -64,6 +64,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<artifactId>training5-answer</artifactId>
+	<version>1.0.0</version>
 	<description>Spring Core Training</description>
 </project>

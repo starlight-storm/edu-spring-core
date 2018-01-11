@@ -5,7 +5,7 @@ import com.example.business.repository.MessageRepository;
 
 public class MessageServiceImpl implements MessageService {
 
-	MessageRepository messageRepository;
+	private MessageRepository messageRepository;
 
 	public MessageServiceImpl(MessageRepository messageRepository) {
 		this.messageRepository = messageRepository;
