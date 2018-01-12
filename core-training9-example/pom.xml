@@ -7,8 +7,8 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>mvc-answer8</name>
-	<description>Spring MVC Training project for Spring Boot</description>
+	<name>core-training9-example</name>
+	<description>Spring Core Training project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -75,5 +75,5 @@
 	</build>
 
 
-	<artifactId>mvc-answer8</artifactId>
+	<artifactId>core-training9-example</artifactId>
 </project>
