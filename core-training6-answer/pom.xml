@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
-	<artifactId>training7-answer</artifactId>
+	<artifactId>core-training6-answer</artifactId>
 	<version>1.0.0</version>
-	<name>training7-answer</name>
+	<name>core-training6-answer</name>
 
 	<properties>
 		<org.springframework-version>4.3.13.RELEASE</org.springframework-version>

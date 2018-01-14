@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
 	<artifactId>core-training5-answer</artifactId>
-	<name>core-training5</name>
+	<name>core-training5-answer</name>
 
 	<properties>
 		<org.springframework-version>4.3.13.RELEASE</org.springframework-version>
