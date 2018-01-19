@@ -10,11 +10,11 @@
        </layout>
     </appender>
 <!--
-    <logger name="org.springframework.transaction">
+    <logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager">
        <level value="debug"/>
     </logger>
-    
-    <logger name="org.springframework.jdbc">
+  
+    <logger name="com.example.customer.business.repository.CustomerRepository">
        <level value="debug"/>
     </logger>
 -->
