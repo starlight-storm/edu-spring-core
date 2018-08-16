@@ -13,18 +13,18 @@ import com.example.customer.business.service.CustomerService;
 @Controller
 public class CustomerListController {
 
-    @Autowired
-    private CustomerService customerService;
+	@Autowired
+	private CustomerService customerService;
 
-    @GetMapping(value = "/")
-    public String home() {
-        return "forward:/customer";
-    }
-    
-    // TODO 演習8 不足しているアノテーションを記述しなさい
-    public String showAllCustomers(Model model) {
-        List<Customer> customers = customerService.findAll();
-     // TODO 演習8 モデルにCustomersを設定して、リターンを修正しなさい
-        return null;
-    }
+	@GetMapping(value = "/")
+	public String home() {
+		return "forward:/customer";
+	}
+
+	// TODO 演習8 不足しているアノテーションを記述しなさい
+	public String showAllCustomers(Model model) {
+		List<Customer> customers = customerService.findAll();
+		// TODO 演習8 モデルにCustomersを設定して、リターンを修正しなさい
+		return null;
+	}
 }

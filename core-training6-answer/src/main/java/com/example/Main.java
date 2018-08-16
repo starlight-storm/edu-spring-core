@@ -43,7 +43,7 @@ public class Main {
 		customerService.update(customer);
 		System.out.println("更新後顧客: " + customerService.findById(id));
 	}
-	
+
 	private ApplicationContext createApplicationContext() {
 		GenericXmlApplicationContext context = new GenericXmlApplicationContext();
 		context.getEnvironment().setActiveProfiles("product", "test");

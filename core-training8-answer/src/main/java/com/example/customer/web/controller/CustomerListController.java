@@ -13,18 +13,18 @@ import com.example.customer.business.service.CustomerService;
 @Controller
 public class CustomerListController {
 
-    @Autowired
-    private CustomerService customerService;
+	@Autowired
+	private CustomerService customerService;
 
-    @GetMapping(value = "/")
-    public String home() {
-        return "forward:/customer";
-    }
-    
-    @GetMapping(value = "/customer")
-    public String showAllCustomers(Model model) {
-        List<Customer> customers = customerService.findAll();
-        model.addAttribute("customers", customers);
-        return "customer/list";
-    }
+	@GetMapping(value = "/")
+	public String home() {
+		return "forward:/customer";
+	}
+
+	@GetMapping(value = "/customer")
+	public String showAllCustomers(Model model) {
+		List<Customer> customers = customerService.findAll();
+		model.addAttribute("customers", customers);
+		return "customer/list";
+	}
 }

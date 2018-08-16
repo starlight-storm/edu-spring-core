@@ -2,8 +2,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-  <bean id="messageService" class="com.example.business.service.MessageServiceImpl">
-      <property name="messageRepository" ref="messageRepository" />
-  </bean>
-  <bean id="messageRepository" class="com.example.infrastructure.MessageRepositoryImpl" />
+	<bean id="messageService"
+		class="com.example.business.service.MessageServiceImpl">
+		<property name="messageRepository" ref="messageRepository" />
+	</bean>
+	<bean id="messageRepository"
+		class="com.example.infrastructure.MessageRepositoryImpl" />
 </beans>

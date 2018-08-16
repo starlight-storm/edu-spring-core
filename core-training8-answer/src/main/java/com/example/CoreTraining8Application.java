@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MvcAnswer6Application {
+public class CoreTraining8Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MvcAnswer6Application.class, args);
+		SpringApplication.run(CoreTraining8Application.class, args);
 	}
 }

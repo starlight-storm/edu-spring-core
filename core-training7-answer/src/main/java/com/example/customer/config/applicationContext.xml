@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="Shift_JIS"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
 	xsi:schemaLocation="
      http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -17,21 +20,26 @@
 
 	<beans profile="product">
 		<context:annotation-config />
-		<context:component-scan base-package="com.example.customer.*" />
+		<context:component-scan
+			base-package="com.example.customer.*" />
 		<context:property-placeholder
 			location="classpath:/com/example/customer/config/jdbc.properties" />
 		<tx:annotation-driven />
 
-		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<bean id="sqlSessionFactory"
+			class="org.mybatis.spring.SqlSessionFactoryBean">
 			<property name="dataSource" ref="dataSource" />
-			<property name="configLocation" value="com/example/customer/config/mybatis-config.xml" />
+			<property name="configLocation"
+				value="com/example/customer/config/mybatis-config.xml" />
 			<!-- Interfaceではなく、XMLのSQLマッピングを利用する場合はコメントを外します。 <property name="mapperLocations"> 
 				<list> <value>classpath*:com/example/infrastructure/**/*.xml</value> </list> 
 				</property> -->
 		</bean>
 
-		<!-- <mybatis:scan base-package="com.example.customer.business.repository" /> -->
-		<bean id="customerRepository" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<!-- <mybatis:scan base-package="com.example.customer.business.repository" 
+			/> -->
+		<bean id="customerRepository"
+			class="org.mybatis.spring.mapper.MapperFactoryBean">
 			<property name="mapperInterface"
 				value="com.example.customer.business.repository.CustomerRepository" />
 			<property name="sqlSessionFactory" ref="sqlSessionFactory" />
@@ -46,9 +54,10 @@
 			p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}"
 			p:username="${jdbc.username}" p:password="${jdbc.password}" />
 	</beans>
-			
+
 	<beans profile="test">
-		<jdbc:initialize-database data-source="dataSource">
+		<jdbc:initialize-database
+			data-source="dataSource">
 			<jdbc:script location="script/table.sql" />
 			<jdbc:script location="script/data.sql" />
 		</jdbc:initialize-database>
