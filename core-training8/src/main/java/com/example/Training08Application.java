@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoreTraining8Application {
+public class Training08Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoreTraining8Application.class, args);
+		SpringApplication.run(Training08Application.class, args);
 	}
 }
