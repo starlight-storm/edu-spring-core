@@ -31,6 +31,13 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	public void update(Customer customer) {
 		customerRepository.update(customer);
+		
+		// オプション：トランザクションの確認: 少し無理やり感があるけどInsertする。
+		Customer newCustomer = new Customer("百太郎", "アメリカ", "100@xx.yy.zz");
+		customerRepository.insert(newCustomer);
+		
+		// オプション：トランザクションの確認: 少し無理やり感があるけど、コメントを外して無理やり例外を発生させる
+		throw new RuntimeException("Rollbackしてるから、百太郎って出ないでしょ？");
 	}
 
 	@Override

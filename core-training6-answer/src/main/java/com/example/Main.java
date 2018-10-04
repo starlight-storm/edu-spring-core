@@ -40,8 +40,12 @@ public class Main {
 	private void update(CustomerService customerService, int id) {
 		Customer customer = customerService.findById(id);
 		customer.setName("佐藤");
-		customerService.update(customer);
-		System.out.println("更新後顧客: " + customerService.findById(id));
+		try { // オプション：トランザクションの確認: 少し無理やり感があるけどtry-catchする。
+			customerService.update(customer);
+			System.out.println("更新後顧客: " + customerService.findById(id));
+		} catch(RuntimeException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	private ApplicationContext createApplicationContext() {

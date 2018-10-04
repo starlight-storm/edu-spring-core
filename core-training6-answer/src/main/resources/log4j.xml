@@ -9,18 +9,20 @@
                 value="%d %-5p %C - %m%n"/>
        </layout>
     </appender>
-<!--
+
+
     <logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager">
        <level value="debug"/>
     </logger>
-  
+<!-- 
     <logger name="com.example.customer.business.repository.CustomerRepository">
        <level value="debug"/>
     </logger>
--->
+ -->
+ 
     <root>
        <priority value ="warn" />
        <appender-ref ref="stdout" />
     </root>
-        
+
 </log4j:configuration>

@@ -2,6 +2,7 @@ package com.example.customer.business.repository;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -23,5 +24,8 @@ public interface CustomerRepository {
 
 	@Update("UPDATE CUSTOMER SET NAME=#{name}, ADDRESS=#{address}, EMAIL_ADDRESS=#{emailAddress} WHERE ID = #{id}")
 	public void update(Customer customer);
+
+	@Insert("INSERT INTO CUSTOMER(NAME, ADDRESS, EMAIL_ADDRESS) VALUES (#{name}, #{address}, #{emailAddress})")
+	public void insert(Customer customer);
 
 }

@@ -1,5 +1,8 @@
 package com.example.customer.service;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
@@ -29,6 +32,10 @@ public class CustomerServiceTest {
 	CustomerService customerService;
 
 	// TODO 演習7 不足しているアノテーションを記述しなさい
+	public void testFindById() {
+		Customer customer = customerService.findById(0);
+		assertThat("太郎", equalTo(customer.getName()));
+	}
 	
 	// TODO 演習7 不足しているアノテーションを記述しなさい
 	public void testUpdate() {
