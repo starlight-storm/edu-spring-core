@@ -5,6 +5,6 @@ import com.example.business.repository.MessageRepository;
 
 public class MessageRepositoryImpl implements MessageRepository {
 	public Message findOne() {
-		return new Message("Hello DI Annotation!");
+		return new Message("Hello DI JavaConfig!");
 	}
 }
